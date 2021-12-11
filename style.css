@@ -329,3 +329,10 @@ height: auto;
     cursor: pointer;
    }
 /*kontakt2*/
+.hide{
+	opacity:0
+}
+
+.show {
+	opacity: 1;
+}

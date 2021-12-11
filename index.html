@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <script src="script.js"></script>
+        <link rel="stylesheet" href="animate.css" type="text/css">
 
     </head>
     <body style="margin: 0;">
@@ -17,21 +18,20 @@
         <img src="log1.png" alt="" class="logo">
         <div class="home">HOME</div>
         <div class="about" onclick="location.href='https://voksio297.github.io/about/'">O MNIE</div>
-        <div class="port">PORTFOLIO</div>
+        <div class="port" onclick="location.href='https://voksio297.github.io/port2portfolio/'">PORTFOLIO</div>
         <div class="skills">UMIEJĘTNOŚCI</div>
         <div class="button" onclick="location.href='https://voksio297.github.io/Kon2/'">KONTAKT</div>
         <!--menu-->
         
-        <div class="nag1">Front-end Web Developer</div>
 
         <!--pas-->
         <div class="pas"></div>
         <!--pas-->
 
         <!--about-->
-        <img src="a1.jpg" onclick="location.href='https://voksio297.github.io/about/'" class="a1 ">
+        <img data-animate="bounceInUp" src="a1.jpg" onclick="location.href='https://voksio297.github.io/about/'" class="a1 ">
         <div class="a2" onclick="location.href='https://voksio297.github.io/about/'">O MNIE..</div>
-        <img src="p1.jpg" class="p1">
+        <img data-animate="bounceInUp" src="p1.jpg" class="p1">
         <div class="p2">PORTFOLIO</div>
         <img class="u1" src="u1.jpg">
         <div class="u2" >UMIEJĘTNOŚCI</div>
@@ -45,5 +45,24 @@
             <div class="fo"></div>
             <div class="c22" onclick="location.href='https://voksio297.github.io/Kon2/'">KONTAKT</div>
         </footer>
-    </body>
+
+              <div  class="nag1" data-animate="bounceInUp">Front-end Web Developer</div>
+          
+
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="jquery.viewportchecker.min.js"></script>
+<script>
+	$(document).ready(function(){
+
+		$('*[data-animate]').addClass('hide').each(function(){
+      $(this).viewportChecker({
+        classToAdd: 'show animated ' + $(this).data('animate'),
+        classToRemove: 'hide',
+        offset: '30%'
+      });
+    });
+
+	});
+</script>
+</body>
 </html>
